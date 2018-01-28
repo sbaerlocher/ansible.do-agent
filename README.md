@@ -12,14 +12,15 @@ ansible-galaxy install sbaerlocher.do-agent
 
 ## Requirements
 
+None
+
 ## Role Variables
 
-| Variable             | Default     | Comments (type)                                   |
-| :---                 | :---        | :---                                              |
-| | | |
-| | | |
+None
 
 ## Dependencies
+
+None
 
 ## Example Playbook
 
@@ -30,6 +31,10 @@ ansible-galaxy install sbaerlocher.do-agent
 ```
 
 ## Changelog
+
+### 1.0
+
+* inital commit
 
 ## Author
 

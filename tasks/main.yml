@@ -34,3 +34,13 @@
   tags:
     - configuration
     - packages
+
+- name: ensure do-agent packages are installed
+  package:
+    name: do-agent
+  notify:
+    - enabled do-agent
+    - started do-agent
+  tags:
+    - configuration
+    - packages
