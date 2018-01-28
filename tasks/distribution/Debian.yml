@@ -1,0 +1,16 @@
+---
+# tasks file for sbaerlocher.do-agent
+
+- name: Debian | ensure do-agent apt repository public key is installed
+  apt_key:
+    url: "{{ agent_apt_key_url }}"
+    state: present
+  when: agent_apt_key_url is defined
+
+- name: Debian | ensure do-agent apt repository is enabled
+  apt_repository:
+    repo: "{{ agent_apt_repo }}"
+    filename: "{{ agent_apt_repo_file }}"
+    update_cache: true
+    state: present
+  when: agent_apt_repo is defined

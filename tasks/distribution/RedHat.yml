@@ -1,0 +1,15 @@
+---
+# tasks file for sbaerlocher.do-agent
+
+- name: CentOS | ensure do-agent yum repository is enabled
+  yum_repository:
+    name: digitalocean-agent
+    description: DigitalOcean agent
+    baseurl: "{{ agent_yum_repo }}"
+    file: "{{ agent_yum_repo_file }}"
+    gpgkey: "{{ agent_yum_key_url }}"
+    gpgcheck: yes
+    state: present
+    enabled: yes
+    failovermethod: priority
+  when: agent_yum_repo is defined

@@ -1,2 +1,12 @@
 ---
 # handlers file for sbaerlocher.do-agent
+
+- name: started do-agent
+  service:
+    name: "{{ agent_service_name }}"
+    state: started
+
+- name: enabled do-agent
+  service:
+    name: "{{ agent_service_name }}"
+    enabled: true
