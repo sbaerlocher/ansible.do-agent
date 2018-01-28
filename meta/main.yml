@@ -1,34 +1,25 @@
 ---
 
 galaxy_info:
-  author:
-  description:
-  company:
+  author: "Simon Bärlocher"
+  description: Cross-distro installation of the DigitalOcean monitoring agent
   license: MIT
   min_ansible_version: 2
   platforms:
-    - name: Archlinux
-      versions:
-        - all
-    - name: EL
-      versions:
-        - 5
-        - 6
-    - name: Fedora
-      versions:
-        - 16
-        - 17
-        - 18
     - name: Ubuntu
       versions:
-        - precise
-        - quantal
-        - raring
-        - saucy
+        - trusty
+        - wily
+        - xenial
+        - yakkety
     - name: Debian
       versions:
-        - wheezy
-
-  galaxy_tags: []
+        - jessie
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - cloud
+    - monitoring
 
 dependencies: []
