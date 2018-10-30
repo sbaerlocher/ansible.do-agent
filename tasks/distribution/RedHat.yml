@@ -8,8 +8,8 @@
     baseurl: "{{ agent_yum_repo }}"
     file: "{{ agent_yum_repo_file }}"
     gpgkey: "{{ agent_yum_key_url }}"
-    gpgcheck: yes
+    gpgcheck: true
     state: present
-    enabled: yes
+    enabled: true
     failovermethod: priority
   when: agent_yum_repo is defined

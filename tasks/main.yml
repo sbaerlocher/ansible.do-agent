@@ -31,6 +31,7 @@
         - "distribution"
   loop_control:
     loop_var: loop_distribution
+  when: ansible_system_vendor == 'DigitalOcean'
   tags:
     - configuration
     - packages
@@ -38,9 +39,9 @@
 - name: ensure do-agent packages are installed
   package:
     name: do-agent
+  when: ansible_system_vendor == 'DigitalOcean'
   notify:
     - enabled do-agent
     - started do-agent
   tags:
-    - configuration
     - packages
